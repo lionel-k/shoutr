@@ -15,7 +15,9 @@ class ShoutsController < ApplicationController
   end
 
   def content_from_params
-    TextShout.new(content_params)
+    case params[:shout][:content_type]
+    when 'TextShout' then TextShout.new(content_params)
+    end
   end
 
   def content_params
