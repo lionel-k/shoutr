@@ -4,6 +4,10 @@ class UsersController < Clearance::UsersController
     render template: 'users/new'
   end
 
+  def show
+    @shouts = current_user.shouts
+  end
+
   private
 
   def user_params
