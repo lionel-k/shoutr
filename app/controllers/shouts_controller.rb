@@ -15,13 +15,14 @@ class ShoutsController < ApplicationController
   end
 
   def content_from_params
-    case params[:shout][:content_type]
-    when 'TextShout' then TextShout.new(content_params)
-    end
+    params[:content_type].new(content_params)
+    # case params[:shout][:content_type]
+    # when 'TextShout' then TextShout.new(content_params)
+    # end
   end
 
   def content_params
-    params.require(:shout).require(:content).permit(:body)
+    params.require(:shout).require(:content).permit!
   end
 
   def redirect_options_for(shout)
