@@ -48,7 +48,7 @@ GEM
     bootsnap (1.4.1)
       msgpack (~> 1.0)
     builder (3.2.3)
-    byebug (11.0.0)
+    byebug (11.1.1)
     clearance (1.16.2)
       actionmailer (>= 3.1)
       activemodel (>= 3.1)
